@@ -1,13 +1,13 @@
 {% extends "nexus/admin/base_site.html" %}
-{% load adminmedia admin_list i18n %}
+{% load admin_list i18n %}
 
 {% block head %}
   {{ block.super }}
   {% if cl.formset %}
-    <link rel="stylesheet" type="text/css" href="{% admin_media_prefix %}css/forms.css" />
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/forms.css" />
   {% endif %}
   {% if cl.formset or action_form %}
-    {% url admin:jsi18n as jsi18nurl %}
+    {% url 'admin:jsi18n' as jsi18nurl %}
     <script type="text/javascript" src="{{ jsi18nurl|default:'../../jsi18n/' }}"></script>
   {% endif %}
   {{ media.css }}
