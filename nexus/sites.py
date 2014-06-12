@@ -7,7 +7,6 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.template.loader import render_to_string
 from django.utils.datastructures import SortedDict
-from django.utils.functional import update_wrapper
 from django.utils.http import http_date
 from django.views.decorators.cache import never_cache
 from django.views.decorators.csrf import csrf_protect
