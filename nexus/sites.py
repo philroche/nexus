@@ -13,6 +13,11 @@ from django.views.decorators.cache import never_cache
 from django.views.decorators.csrf import csrf_protect
 from django.views.static import was_modified_since
 
+try:
+    from functools import update_wrapper
+except ImportError:  # Django<=1.4
+    from django.utils.functional import update_wrapper
+
 from nexus import conf
 
 import mimetypes
